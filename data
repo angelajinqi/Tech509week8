@@ -1,0 +1,24 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+stat=pd.read_csv("/Users/angelajin/Desktop/tictac toe robot/client/stat.csv")
+stat= game_data.drop('Unnamed: 0', axis=1)
+game_data
+
+game_data['Player 1'] = game_data['Player 1'].str.capitalize()
+game_data['Player 2'] = game_data['Player 1'].str.capitalize()
+game_data['winner'] = game_data['winner'].str.capitalize()
+print("Total historic games = ", len(game_data))
+total_games = len(game_data)
+
+game_stats = game_data['winner'].value_counts()
+
+game.plot.scatter(x="game number", y="player")
+
+plt.bar(winner_symbols_stats.index,winner_symbols_stats , width=0.8, bottom=None, align='center')
+plt.xlabel('Symbol')
+plt.ylabel('Number of wins')
+plt.title('Bar chart of number of wins of symbols X and O')
+
+games["winner"].value_counts().plot(kind="pie")
